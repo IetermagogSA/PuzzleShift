@@ -12,7 +12,6 @@ namespace Assets
         public static void ScrambleBlocks(LevelController levelController)
         {
             int blockFactor = levelController.blockFactor;
-            float slicedBlockSize = 1024 / blockFactor;
             int blockSwapNumber = 0;
             System.Random r = new System.Random();
 
