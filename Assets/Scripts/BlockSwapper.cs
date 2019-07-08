@@ -5,7 +5,7 @@ namespace Assets
 {
     public class BlockSwapper : MonoBehaviour
     {
-        public static void SwapBlocks(Block blockA, Block blockB)
+        public static void SwapBlocks(Block blockA, Block blockB, bool isNewGame)
         {
             if (AllowSwap(blockA.BlockNumber, blockB.BlockNumber))
             {
@@ -24,8 +24,15 @@ namespace Assets
                 blockB.BlockNumber = oldBlockNumber;
                 blockB.BlockObject.name = oldName;
 
-                BlockShiftSound blockShiftSound = FindObjectOfType<BlockShiftSound>();
-                blockShiftSound.PlayShiftSound();
+                if (!isNewGame)
+                {
+                    // Play a sound
+                    BlockShiftSound blockShiftSound = FindObjectOfType<BlockShiftSound>();
+                    blockShiftSound.PlayShiftSound();
+
+                    // Increment the move counter
+                    FindObjectOfType<MoveCounter>().IncreaseMoveCount();
+                }
             }
         }
 

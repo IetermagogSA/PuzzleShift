@@ -20,7 +20,7 @@ namespace Assets
                 // Get a random block number to swap with
                 blockSwapNumber = r.Next(levelController.maxBlocks);
 
-                BlockSwapper.SwapBlocks(levelController.gameplayBlockList[i], levelController.gameplayBlockList[blockSwapNumber]);
+                BlockSwapper.SwapBlocks(levelController.gameplayBlockList[i], levelController.gameplayBlockList[blockSwapNumber], true);
             }
         }
     }

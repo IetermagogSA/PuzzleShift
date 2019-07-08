@@ -9,7 +9,7 @@ namespace Assets
     {
         private void Update()
         {
-            if(Input.GetMouseButton(0))
+            if(Input.GetMouseButtonDown(0))
             {
                 Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 Vector2 mousePos2D = new Vector2(mousePos.x, mousePos.y);
@@ -29,7 +29,7 @@ namespace Assets
 
                         Block clickedBlock = new Block(Convert.ToInt32(hit.collider.gameObject.name), hit.collider.gameObject);
 
-                        BlockSwapper.SwapBlocks(LevelController.emptyBlock, clickedBlock);
+                        BlockSwapper.SwapBlocks(LevelController.emptyBlock, clickedBlock, false);
                     }
                 }
             }
