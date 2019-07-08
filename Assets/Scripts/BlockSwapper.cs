@@ -23,6 +23,9 @@ namespace Assets
                 blockB.BlockObject.transform.position = oldPos;
                 blockB.BlockNumber = oldBlockNumber;
                 blockB.BlockObject.name = oldName;
+
+                BlockShiftSound blockShiftSound = FindObjectOfType<BlockShiftSound>();
+                blockShiftSound.PlayShiftSound();
             }
         }
 

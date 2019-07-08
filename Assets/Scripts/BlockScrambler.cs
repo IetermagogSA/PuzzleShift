@@ -15,7 +15,7 @@ namespace Assets
             int blockSwapNumber = 0;
             System.Random r = new System.Random();
 
-            for(int i = 0; i < levelController.maxBlocks; i++)
+            for (int i = 0; i < levelController.maxBlocks; i++)
             {
                 // Get a random block number to swap with
                 blockSwapNumber = r.Next(levelController.maxBlocks);

@@ -25,7 +25,7 @@ namespace Assets
                     // Process the click here - get the object that was clicked and then determine if it can be swapped with the empty block
                     if (hit.collider != null)
                     {
-                        Debug.Log(hit.collider.gameObject.name);
+                        //Debug.Log(hit.collider.gameObject.name);
 
                         Block clickedBlock = new Block(Convert.ToInt32(hit.collider.gameObject.name), hit.collider.gameObject);
 
