@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\ClickManager.cs" />
     <Compile Include="Assets\Scripts\LevelController.cs" />
     <Compile Include="Assets\Scripts\MoveCounter.cs" />
+    <Compile Include="Assets\Scripts\ObjectCopier.cs" />
     <Compile Include="Assets\Scripts\TextureDivider.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />

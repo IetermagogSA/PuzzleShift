@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 namespace Assets
 {
@@ -25,11 +26,11 @@ namespace Assets
                     // Process the click here - get the object that was clicked and then determine if it can be swapped with the empty block
                     if (hit.collider != null)
                     {
-                        //Debug.Log(hit.collider.gameObject.name);
+                        //Block clickedBlock = new Block(Convert.ToInt32(hit.collider.gameObject.name), hit.collider.gameObject);
 
-                        Block clickedBlock = new Block(Convert.ToInt32(hit.collider.gameObject.name), hit.collider.gameObject);
+                        Block clickedBlock = LevelController.gameplayBlockList.Where(i => i.BlockObject.name == hit.collider.gameObject.name).FirstOrDefault();
 
-                        BlockSwapper.SwapBlocks(LevelController.emptyBlock, clickedBlock, false);
+                        BlockSwapper.SwapBlocks(LevelController.emptyBlock, clickedBlock);
                     }
                 }
             }

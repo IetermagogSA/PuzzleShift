@@ -40,8 +40,8 @@ public static class TextureDivider
                 BoxCollider2D collider = n.AddComponent<BoxCollider2D>();
 
                 newBlock = new Block(blockNumber, n);
-                myLevelcontroller.sortedBlockList.Add(newBlock);
-                myLevelcontroller.gameplayBlockList.Add(newBlock);
+
+                LevelController.gameplayBlockList.Add(newBlock);
             }
         }
    }

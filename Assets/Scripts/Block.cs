@@ -8,6 +8,7 @@ using UnityEngine;
 
 namespace Assets
 {
+    [Serializable]
     public class Block
     {
         public int BlockNumber{ get; set; }
@@ -27,9 +28,9 @@ namespace Assets
         public static void CreateEmptyBlock(LevelController levelController)
         {
             System.Random r = new System.Random();
-            int indexToDelete = r.Next(levelController.gameplayBlockList.Count);
-            LevelController.emptyBlock = levelController.gameplayBlockList[indexToDelete];
-            levelController.gameplayBlockList.RemoveAt(indexToDelete);
+            int indexToDelete = r.Next(LevelController.gameplayBlockList.Count);
+            LevelController.emptyBlock = LevelController.gameplayBlockList[indexToDelete];
+
             HideBlock(LevelController.emptyBlock);
         }
 
